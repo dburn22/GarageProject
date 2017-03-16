@@ -1,0 +1,35 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+group = 'Garage'
+version = '0.0.1-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+project.webAppDirName = 'WebContent'
+sourceSets {
+  main {
+    java.srcDirs 'src'
+  }
+}
+war{
+archiveName = "${baseName}.war"
+}
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'4.3.2.RELEASE'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0'
+    compile group: 'javax.servlet', name: 'jstl', version:'1.2'
+    compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'org.springframework', name: 'spring-test', version:'4.3.2.RELEASE'
+}
