@@ -1,11 +1,33 @@
 package data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public interface CarDAO {
 	public Car getCarByModel(String model);
 
-	public Car getCarBymake(String make);
+	public List<Car> getCarByMake(String make);
 
 	public void addCar(Car car);
 
 	public Car getColor(String color);
+
+	public Car getWhp(String whp);
+	
+	public Car getCarNum(int carNum);
+
+	public Car getTopSpeed(String topSpeed);
+	
+	public Car getPicture(String picture);
+	public Car editCar(String picture);
+	public Car deleteCar(String picture);
+	
+
+	public List<Car> getCars();
+
+	int getPreviousIndex(int currentIndex, ArrayList<Car> currentList);
+
+	int getNextIndex(int currentIndex, ArrayList<Car> currentList);
+
+	void removeCar(String name);
 }

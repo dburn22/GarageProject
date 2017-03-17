@@ -7,11 +7,14 @@ public class Car {
 	private String torque;
 	private String topSpeed;
 	private String color;
+	private String picture;
+	private int carNum;
 
 	public Car() {
 	}
 
-	public Car(String make, String model, String whp, String torque, String topSpeed, String color) {
+	public Car(String make, String model, String whp, String torque, String topSpeed, String color, String picture,
+			int carNum) {
 		super();
 		this.make = make;
 		this.model = model;
@@ -19,6 +22,16 @@ public class Car {
 		this.torque = torque;
 		this.topSpeed = topSpeed;
 		this.color = color;
+		this.picture = picture;
+		this.carNum = carNum;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
 	}
 
 	public String getMake() {
@@ -69,25 +82,18 @@ public class Car {
 		this.color = color;
 	}
 
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Car [make=");
-		builder.append(make);
-		builder.append(", model=");
-		builder.append(model);
-		builder.append(", whp=");
-		builder.append(whp);
-		builder.append(", torque=");
-		builder.append(torque);
-		builder.append(", topSpeed=");
-		builder.append(topSpeed);
-		builder.append(", color=");
-		builder.append(color);
-		builder.append("]");
-		return builder.toString();
+	public int getCarNum() {
+		return carNum;
 	}
 
+	public void setCarNum(int carNum) {
+		this.carNum = carNum;
+	}
 
+	@Override
+	public String toString() {
+		return "Car [make=" + make + ", model=" + model + ", whp=" + whp + ", torque=" + torque + ", topSpeed="
+				+ topSpeed + ", color=" + color + ", picture=" + picture + ", carNum=" + carNum + "]";
+	}
 
 }
