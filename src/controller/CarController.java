@@ -39,7 +39,7 @@ public class CarController {
 	public ModelAndView getCarNum(@RequestParam("make") String a) {
 		ModelAndView mv = new ModelAndView();
 		// if(make ! make){
-		System.out.println(a);
+		System.out.println("*********" + a);
 		mv.setViewName("result.jsp");
 		mv.addObject("cars", carDao.getCarByMake(a));
 		mv.getModelMap().addAttribute("currentList", carDao.getCarByMake(a));
@@ -82,6 +82,16 @@ public class CarController {
 		System.out.println(car);
 		car.setCarNum(carDao.getCars().size()+1);
 		carDao.addCar(car);
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("carList", carDao.getCars());
+		mv.setViewName("garage.jsp");
+		return mv;
+	}
+	
+	@RequestMapping(path = "DeleteCar.do", method = RequestMethod.GET)
+	public ModelAndView deleteCar(@RequestParam("name") int carNum) {
+		System.out.println(carNum);
+		carDao.removeCar(carNum);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("carList", carDao.getCars());
 		mv.setViewName("garage.jsp");

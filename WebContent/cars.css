@@ -11,9 +11,9 @@
 	width: 30%;
 	border: 1px dotted black;
 	text-align: center;
-	disply: inline-block;
-	text-align: center;
-	background-color: white;
+	    display: block;
+	text-align: right;
+	
 }
 
 .newCarForm {
@@ -45,7 +45,6 @@ h3 {
 	bullet-type: none;
 }
 
-
 p {
 	text-align: center;
 	bullet-type: none;
@@ -62,18 +61,23 @@ img {
 	text-align: center;
 	bullet-type: none;
 	/* border-radius: 40%; */
-	height: 40%;
+	height: 60%;
 	width: 40%;
 	background-color: white;
 	border: 30px solid black;
 }
-ul{
+
+ul {
 	list-style: none;
-	
+}
+
+li {
+	list-style: none;
 }
 
 #div1 {
-	
 	text-align: center;
 	bullet-type: none;
+	background-color: grey;
+	background-size: cover;
 }

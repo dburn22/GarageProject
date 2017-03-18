@@ -20,7 +20,7 @@ public interface CarDAO {
 	
 	public Car getPicture(String picture);
 	public Car editCar(String picture);
-	public Car deleteCar(String picture);
+	public void removeCar(int carNum);
 	
 
 	public List<Car> getCars();
@@ -29,5 +29,7 @@ public interface CarDAO {
 
 	int getNextIndex(int currentIndex, ArrayList<Car> currentList);
 
-	void removeCar(String name);
+
+	public void deleteCar(Car car);
+
 }

@@ -43,12 +43,12 @@ public class CarDAOImpl implements CarDAO {
 	@Override
 	public List<Car> getCarByMake(String make) {
 		List<Car> c = new ArrayList<>();
-		System.out.println(make);
 		for (Car car : cars) {
-			System.out.println(car);
 			if (car.getMake().equalsIgnoreCase(make)) {
-				
+				//
+				// c = car;
 				c.add(car);
+				System.out.println(car);
 			}
 
 		}
@@ -64,17 +64,6 @@ public class CarDAOImpl implements CarDAO {
 		}
 		return currentIndex;
 	}
-//	@Override
-//    public void removeCar(String name) {
-//        int index = 0;
-//            for (Car car2 : cars) {
-//                if(car2.getMake().equals(name)){
-//                    index = cars.indexOf(car2);
-//                    break;
-//                }
-//            }
-//        cars.remove(index);
-//    }
 
 	@Override
 	public int getPreviousIndex(int currentIndex, ArrayList<Car> currentList) {
@@ -87,11 +76,30 @@ public class CarDAOImpl implements CarDAO {
 
 	@Override
 	public void addCar(Car car) {
-		if (car.getPicture().equals("gwagon.jpg")) {
-			car.setColor("black");
-		} else if (car.getPicture().equals("gt3.jpg")) {
-			car.setColor("white");
+		if (car.getPicture().equals("rs4.jpg")) {
+			car.setMake("Audi");
+			car.setModel("RS4");
+			car.setWhp("whp");
+			car.setTopSpeed("topSpeed");
+			car.setColor("Grey");
+
+		} else if (car.getPicture().equals("h1.jpg")) {
+			car.setMake("Hummer");
+			car.setModel("H1");
+			car.setWhp("whp");
+			car.setTopSpeed("topSpeed");
+			car.setColor("Grey");
+		} else if (car.getPicture().equals("918.jpg")) {
+			car.setMake("Porsche");
+			car.setModel("918 Spyder");
+			car.setWhp("whp");
+			car.setTopSpeed("topSpeed");
+			car.setColor("Grey");
+
 		}
+		// else if (car.getPicture().equals(".jpg")) {
+		// car.setColor("Grey");
+		// }
 
 		cars.add(car);
 
@@ -144,14 +152,23 @@ public class CarDAOImpl implements CarDAO {
 		return null;
 	}
 
+
+
+
 	@Override
-	public Car deleteCar(String picture) {
-		// TODO Auto-generated method stub
-		return null;
+	public void removeCar(int carNum) {
+		Car c = null;
+		for (Car car : cars) {
+				if(car.getCarNum()==carNum){
+					c = car;
+				}
+		}
+		cars.remove(c);
+		
 	}
 
 	@Override
-	public void removeCar(String name) {
+	public void deleteCar(Car car) {
 		// TODO Auto-generated method stub
 		
 	}

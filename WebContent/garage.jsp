@@ -9,9 +9,12 @@
 <title>Garage</title>
 <link rel="stylesheet" type="text/css" href="cars.css">
 </head>
-<div class="garageIntro">
-	<body>
-	<button class="button"><a href="index.html">Main Menu</a></button>
+<!-- <div class="garageIntro"> -->
+<body>
+	<div class="col-md-6 col-xs-12">
+		<button class="button">
+			<a href="index.html">Main Menu</a>
+		</button>
 
 		<h3>Garage:</h3>
 		<c:forEach items="${carList}" var="cars">
@@ -24,16 +27,26 @@
 						<li>${cars.whp}</li>
 						<li>${cars.topSpeed}</li>
 						<li>${cars.color}</li>
-						</ul>
+						<button class="button">
+							<a href="DeleteCar.do?name=${cars.carNum}">Delete</a>
+						</button>
+
+					</ul>
 				</div>
 				<div id="carPic">
-					<img src="photo/${cars.picture}">
+					<div class="col-md-6 col-xs-12">
+						<img src="photo/${cars.picture}">
+
+					</div>
 				</div>
-				
+
+
 			</form>
 		</c:forEach>
-<button class="button"><a href="index.html">Main Menu</a></button>
-</div>
+		<button class="button">
+			<a href="index.html">Main Menu</a>
+		</button>
+	</div>
 
 </body>
 </html>
