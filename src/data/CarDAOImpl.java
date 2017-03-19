@@ -97,13 +97,12 @@ public class CarDAOImpl implements CarDAO {
 			car.setColor("Grey");
 
 		}
-		// else if (car.getPicture().equals(".jpg")) {
-		// car.setColor("Grey");
-		// }
-
+		else if (car.getPicture().equals(null)) {
+			System.out.println("Error. You have not selected a car.");
+			
+		}
 		cars.add(car);
-
-	}
+}
 
 	@Override
 	public Car getColor(String color) {

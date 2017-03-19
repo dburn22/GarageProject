@@ -3,18 +3,17 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-
-#intro {
+ 
+/* #intro {
 	margin-left: 35%;
 	margin-top: 5%;
 	margin-bottom: 5%;
 	width: 30%;
 	border: 1px dotted black;
 	text-align: center;
-	    display: block;
+	display: block;
 	text-align: right;
-	
-}
+}  */
 
 .newCarForm {
 	text-align: center;
@@ -32,11 +31,15 @@ h3 {
 
 #intro>a {
 	text-decoration: none;
-	color: darkred;
 	font-weight: bold;
 	font-family: sans-serif;
 	font-size: 20px;
 	bullet-type: none;
+    float: left;
+    display: block;
+    color: white;
+    padding: 14px 16px;
+	font-size: 25px;
 }
 
 .garageIntro {
@@ -51,10 +54,10 @@ p {
 }
 
 #enterVehicle {
-	background-image: url("photo/garage6.jpg");
-	background-size: cover;
+	background-color: grey;
 	background-repeat: no-repeat;
 	bullet-type: none;
+	background-repeat: no-repeat;
 }
 
 img {
@@ -78,6 +81,17 @@ li {
 #div1 {
 	text-align: center;
 	bullet-type: none;
+	height; 20%;
 	background-color: grey;
 	background-size: cover;
+}
+
+.radio {
+	text-align: center;
+	font-size: 20px;
+	color: darkred;
+}
+
+span {
+	text-align: center;
 }

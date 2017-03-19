@@ -15,6 +15,9 @@
 		<button class="button">
 			<a href="index.html">Main Menu</a>
 		</button>
+		<button class="button">
+			<a href="newCar.html">Back to add Vehicle.</a>
+		</button>
 
 		<h3>Garage:</h3>
 		<c:forEach items="${carList}" var="cars">
@@ -45,6 +48,9 @@
 		</c:forEach>
 		<button class="button">
 			<a href="index.html">Main Menu</a>
+		</button>
+		<button class="button">
+			<a href="newCar.html">Back to add Vehicle.</a>
 		</button>
 	</div>
 
